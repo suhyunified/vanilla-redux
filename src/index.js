@@ -40,9 +40,7 @@ const reducer = (state = [], { type, text, id }) => {
       return [{ text, id: Date.now() }, ...state ]
 
     case DELETE_TODO:
-      return state.filter(todo => {
-        return todo.id !== +id
-      })
+      return state.filter(todo => todo.id !== +id)
 
     default:
       return state
